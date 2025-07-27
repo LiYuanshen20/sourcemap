@@ -1,0 +1,32 @@
+.top-identity-icon {
+    &.identity-icon-0 {
+        width: 57px;
+        height: 18px;
+        background-image: url(./images/管理员.png);
+    }
+    &.identity-icon-1 {
+        width: 44px;
+        height: 18px;
+        background-image: url(./images/教师.png);
+    }
+    &.identity-icon-2 {
+        width: 44px;
+        height: 18px;
+        background-image: url(./images/学生.png);
+    }
+    &.identity-icon-3 {
+        width: 44px;
+        height: 20px;
+        background-image: url(./images/家长.png);
+    }
+    &.identity-icon-8 {
+        width: 74px;
+        height: 18px;
+        background-image: url(./images/教育局领导.png);
+    }
+    &.identity-icon-11 {
+        width: 64px;
+        height: 18px;
+        background-image: url(./images/其他职工.png);
+    }
+}

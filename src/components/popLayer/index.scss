@@ -1,0 +1,16 @@
+.myLgPopLayer{
+  .lg_popLayer_main_detail{
+    padding: 0 !important;
+    .popLayer_loading{
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .popLayer_children{
+      padding: 24px 32px;
+      position: absolute;
+      inset: 0;
+      overflow: auto;
+    }
+  }
+}

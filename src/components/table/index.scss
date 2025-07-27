@@ -1,0 +1,25 @@
+.myTable_container{
+  width: 100%;
+  // height: 100%;
+  .my_pagination{
+    justify-content: flex-end;
+  }
+}
+.myTable_empty_container{
+  margin: 20px 0;
+  .myTable_empty_img{
+    display: block;
+    margin: 0 auto;
+  }
+  .myTable_empty_text{
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+    margin-top: 3px;
+  }
+}
+
+// 表头居中
+th.th-alignCenter{
+  text-align: center !important;
+}

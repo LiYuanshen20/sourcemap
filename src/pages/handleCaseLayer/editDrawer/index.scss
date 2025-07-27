@@ -1,0 +1,39 @@
+.myDrawer{
+  .lg-drawer-content{
+    padding: 12px 20px !important;
+    flex-direction: column;
+  }
+  .myDrawer_subtitle{
+    color: #666;
+    font-weight: normal;
+  }
+  .tipText{
+    color: #999;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    > span{
+      color: #333;
+    }
+  }
+  .myTable_addCase_btn{
+    color: #09f;
+    cursor: pointer;
+    &:hover{
+      opacity: .8;
+    }
+    .myTable_addCase_icon{
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      background: url(../../../images/添加.svg) no-repeat center / 100% 100%;
+      margin-right: 3px;
+    }
+  }
+}
+
+.lg-table-cell.th-alignCenter .el-date-editor.is-have-trigger .el-date-editor.el-input {
+  width: 110px !important;
+}
+.el-date-table td.start-date, .el-date-table td.end-date {
+  color: #fff !important;
+}

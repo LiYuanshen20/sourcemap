@@ -1,0 +1,30 @@
+@import '../../custom.scss';
+.handleCaseLayer{
+  .table_caseDetail{
+    color: #333;
+    .table_caseDetail_tag{
+      font-size: 12px;
+      padding: 2px 3px;
+      margin-right: 3px;
+      border-radius: 2px;
+      color: #426d9e;
+      background-color: rgba($color: #426d9e, $alpha: .1);
+    }
+  }
+  .table_operate_btn{
+    color: #0099ff;
+    cursor: pointer;
+    @include btnHover;
+    &.table_operate_btn_del{
+      color: #ef5757;
+    }
+  }
+}
+.autoSaveBtn{
+  color: #09f;
+  margin-left: 10px;
+  cursor: pointer;
+  &:hover{
+    opacity: .8;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="./favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>周行事历</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script>
+    function divideUrl(url) {
+      let urlSearch = "";
+      let urlHash = "";
+      let urlPath = "";
+      let hashIndex = url.indexOf("#/"); //hash 的位置,查询是否有哈希，有先分离，后面加回来
+      let searchIndex = url.indexOf("?"); //参数的位置
+      if (hashIndex !== -1) {
+        //不存在hash
+        if (hashIndex < searchIndex) {
+          //哈希在前面，直接切
+          urlSearch = url.split("#/")[1].split("?")[1];
+          urlPath = url.split("#/")[0];
+          urlHash = url.split("#/")[1].split("?")[0];
+        } else {
+          //在后面，需要先去掉哈希
+          urlSearch = url.split("#/")[0].split("?")[1];
+          urlPath = url.split("#/")[0].split("?")[0];
+          urlHash = url.split("#/")[1];
+        }
+      } else {
+        urlSearch = url.split("?")[1];
+        urlPath = url.split("?")[0];
+      }
+      return {
+        urlHash,
+        urlPath,
+        urlSearch,
+      };
+    };
+
+    function getUrlQueryVariable(url, variable) {
+      if (typeof url === "string" && !url.includes("?")) {
+        //判断是否为字符串和包含？，不是则返回false
+        return false;
+      }
+      let {
+        urlSearch
+      } = divideUrl(url);
+      var vars = urlSearch.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] === variable) {
+          return pair[1];
+        }
+      }
+      return false;
+    }
+
+    function loadIco(url) {
+      var scriptOrCss = document.createElement('link');
+      scriptOrCss.async = 'async';
+      scriptOrCss.href = url;
+      scriptOrCss.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(scriptOrCss);
+    }
+    
+    if (getUrlQueryVariable(window.location.href, "pageType") === "admin") {
+      loadIco('./weeklyManager.ico');
+      document.title = "周行事历管理"
+    } else {
+      loadIco('./weekly.ico');
+      document.title = "周行事历"
+    }
+  </script>
+</html>

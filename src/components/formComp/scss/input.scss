@@ -1,0 +1,57 @@
+.myInput_container {
+  $placeColor: #cccccc;
+  $placeHoverColor: #e5e5e5;
+
+  width: fit-content;
+  position: relative;
+	.myInput {
+		width: 240px;
+		height: 30px;
+		padding: 0 50px 0 8px;
+		border-radius: 3px;
+		border: solid 1px #d9d9d9;
+		outline: none;
+		&::-webkit-input-placeholder {
+			color: $placeColor;
+		}
+		&::-moz-placeholder {
+			/* Mozilla Firefox 19+ */
+			color: $placeColor;
+		}
+		&:-moz-placeholder {
+			/* Mozilla Firefox 4 to 18 */
+			color: $placeColor;
+		}
+		&:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: $placeColor;
+		}
+		&:hover,
+		&:focus {
+			border-color: #64c1ff;
+			&::-webkit-input-placeholder {
+				color: $placeHoverColor;
+			}
+			&::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: $placeHoverColor;
+			}
+			&:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: $placeHoverColor;
+			}
+			&:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: $placeHoverColor;
+			}
+		}
+	}
+  .myInput_numTip{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #999;
+  }
+}

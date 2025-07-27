@@ -1,0 +1,124 @@
+@import '../../custom.scss';
+.my_body {
+  width: 1200px;
+  // min-height: 580px;
+  min-height: 794px;
+  margin: 16px auto;
+  margin-top: 0;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 0px #e0ecf9;
+  position: relative;
+  top: 16px;
+  .body_top {
+    @include flexStyle(center, space-between);
+    > div {
+      @include flexStyle(center, flex-start);
+    }
+    .top_left {
+      width: calc(100% - 500px);
+      .lg-button-radio-checked {
+        background-color: #0290fd;
+      }
+      .tipText {
+        color: #999;
+        margin-left: 12px;
+        white-space: nowrap;
+        > span {
+          color: #333;
+        }
+      }
+    }
+    .right_btn {
+      height: 30px;
+      padding: 0 12px;
+      @include flexStyle(center, center);
+      border-radius: 3px;
+      background-image: linear-gradient(270deg, #3bcd3b 0%, #32b332 100%);
+      color: #fff;
+      margin-left: 10px;
+      @include btnHover;
+      cursor: pointer;
+      &::before {
+        content: '';
+        width: 13px;
+        height: 13px;
+        margin-right: 4px;
+        background: url(../../images/添加.png) no-repeat center / 100% 100%;
+      }
+      &.partition_btn {
+        background-image: none;
+        border: solid 1px #b3d8ff;
+        background-color: #ecf5ff;
+        color: #0099ff;
+        &::before {
+          background-image: url(../../images/设置.png);
+        }
+      }
+    }
+  }
+  .my_table {
+    margin: 12px 0;
+    .paddingNone {
+      padding: 0;
+    }
+    td.table_index {
+      // font-weight: 700;
+      color: #999;
+    }
+    .table_title {
+      width: 100%;
+      padding: 18px 10px 18px 0;
+      color: #333;
+      cursor: pointer;
+      @include ellipsis;
+    }
+    td.table_dateRange {
+      color: #999;
+    }
+    th.table_th_userInfo {
+      padding-left: 39px;
+    }
+    .table_userInfo {
+      @include flexStyle(center, flex-start);
+      color: #333;
+      width: 100%;
+      .table_userInfo_avatar {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: url(../../images/avatar.jpg) no-repeat center / 100% 100%;
+        margin-right: 5px;
+      }
+      .table_userInfo_userName {
+        width: calc(100% - 30px);
+        @include ellipsis;
+        .table_userInfo_userId {
+          color: #999;
+        }
+      }
+    }
+    .table_operate {
+      .table_operate_split {
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        background-color: #d9d9d9;
+        margin: 0 10px;
+      }
+      .table_operate_btn {
+        color: #0099ff;
+        cursor: pointer;
+        @include btnHover;
+        &.table_operate_btn_del {
+          color: #ef5757;
+        }
+      }
+    }
+  }
+  .university_margin {
+    margin: 20px 0 12px 225px;
+  }
+}

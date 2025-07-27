@@ -1,0 +1,59 @@
+@mixin flexStyle($alignItem: normal, $justifyContent: normal, $flexDirection: row) {
+  display: flex;
+  align-items: $alignItem; // 上下
+  justify-content: $justifyContent; // 左右
+  flex-direction: $flexDirection; // 竖排
+}
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin btnHover {
+  &:hover{
+    opacity: 0.8;
+  }
+}
+// 提示文字颜色(placeholder)
+@mixin inputStyle {
+  width: 240px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 3px;
+  border: solid 1px #d9d9d9;
+  outline: none;
+  &::-webkit-input-placeholder {
+      color: #cccccc;
+  }
+  &::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #cccccc;
+  }
+  &:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #cccccc;
+  }
+  &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #cccccc;
+  }
+  &:hover,
+  &:focus {
+      border-color: #64c1ff;
+      &::-webkit-input-placeholder {
+          color: #e5e5e5;
+      }
+      &::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #e5e5e5;
+      }
+      &:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #e5e5e5;
+      }
+      &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #e5e5e5;
+      }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../custom.scss';
+.detailLayer{
+  .detailLayer_top{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .top_partition{
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #009823;
+      background-color: rgba($color: #009823, $alpha: .1);
+    }
+    .top_title{
+      flex: 1;
+      padding-left: 5px;
+      font-size: 16px;
+      color: #333;
+      @include ellipsis;
+    }
+  }
+  .detailLayer_second{
+    margin: 12px 0;
+    .second_dateRange{
+      color: #999;
+      margin-right: 20px;
+      .dateIcon{
+        display: inline-block;
+        width: 11px;
+        height: 12px;
+        margin-right: 2px;
+        background: url(../../images/沙漏.svg) no-repeat center / 100% 100%;
+      }
+    }
+    .second_userInfo{
+      color: #333;
+      .userInfo_avatar{
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: url(../../images/avatar.jpg) no-repeat center / 100% 100%;
+      }
+    }
+  }
+  .table_caseDetail{
+    color: #333;
+    .table_caseDetail_tag{
+      font-size: 12px;
+      padding: 2px 3px;
+      margin-right: 3px;
+      border-radius: 2px;
+      color: #426d9e;
+      background-color: rgba($color: #426d9e, $alpha: .1);
+    }
+  }
+}

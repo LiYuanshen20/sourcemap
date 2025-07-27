@@ -1,0 +1,171 @@
+.my_header {
+    height: 64px;
+    background: #0048ed url(./images/背景.png) no-repeat right;
+    overflow: hidden;
+    .header_container {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header_sysInfo{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .sysInfo_systemName{
+            margin-left: 8px;
+            color: #fff;
+            font-size: 24px;
+            opacity: .95;
+            font-weight: 700;
+          }
+        }
+        .header_btn {
+            color: rgba(#ffffff, 0.72);
+            .btn_work {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 17px;
+                background-image: url(./images/返回工作平台.svg);
+                background-position: 0 center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                    opacity: .8;
+                }
+            }
+            .slice_line {
+                display: inline-block;
+                vertical-align: middle;
+                width: 1px;
+                height: 12px;
+                background-color: #c6d7e4;
+                opacity: 0.32;
+                margin: 0 20px;
+            }
+            .btn_message {
+                display: inline-block;
+                vertical-align: middle;
+                cursor: pointer;
+                #Assistant_infoCenter {
+                    position: relative;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    top: 3px;
+                    z-index: 1000;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+      
+            .user_info {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+                cursor: pointer;
+                &:hover {
+                    .user_name {
+                        color: #fff;
+                    }
+                }
+                .user_avatar {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    background-size: 100% 100%;
+                    margin-right: 8px;
+                }
+                .user_name {
+                    display: inline-block;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin-right: 3px;
+                }
+                .user_image {
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 16px;
+                }
+                .user_identity {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 74px;
+                    height: 16px;
+                    line-height: 14px;
+                    padding-left: 18px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    color: #fff;
+                    font-size: 10px;
+                    background-size: 100% auto;
+                }
+            }
+            .quitlogo {
+                display: inline-block;
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+                background-image: url(./images/用户信息_退出登录.png);
+                background-size: 100% 100%;
+                cursor: pointer;
+                opacity: 0.72;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.top-btn {
+    display: inline-flex;
+    align-items: center;
+    color: hsla(0, 0%, 100%, .9);
+    opacity: 0.9;
+    cursor: pointer;
+    margin: 0 10px;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
+    svg {
+        margin-right: 3px;
+    }
+    #Assistant_infoCenter {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 2px 0 0;
+    }
+}
+
+.btn_help {
+    opacity: .9;
+    display: inline-block;
+    vertical-align: middle;
+    // margin-left: 20px;
+    padding-left: 18px;
+    color: hsla(0, 0%, 100%, .9);
+    background-image: url(./images/顶部-帮助.png);
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+        // color: #fff;
+        // background-image: url(./images/顶部-帮助-悬停.png);
+    }
+}
+
+.lg-top-bar-root .lg-top-bar-container {
+    padding: 0 !important;
+}

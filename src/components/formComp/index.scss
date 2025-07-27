@@ -1,0 +1,26 @@
+@import './scss/input.scss';
+@import './scss/radio.scss';
+@import './scss/date.scss';
+@import './scss/autoComplete.scss';
+
+.topic_label{
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .label_text{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    text-align: right;
+    margin-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .label_formItem{
+    flex: 1;
+  }
+}
